@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="C:/Users/EXTRA/frontend/project.js"></script> -->
+    <link rel='stylesheet' href='../static/project.css'>
+
+    <!-- <link rel=¨stylesheet¨ type=¨text/css¨ href=¨project.css¨> -->
+
+</head>
+
+<body style="background-image: url('../static/bg1.jpg');">
+    <div class="container right-panel-active">
+
+        <!--<div class="container__form container--signup">-->
+            <form action="{{ url_for('predict') }}" method="POST" class="form" id="form1">
+                <h2 class="form__title" style="font-weight: bold;"> Crunchbase ML project</h2>
+                <h4 class="form__title"> Date Founded</h4>
+                <input type="text" placeholder="Enter the date Founded at here" class="input" name="founded_at"/>
+                <h4 class="form__title"> Funding round</h4>
+                <input type="text" placeholder="Enter the Funding round here" class="input" name="funding_rounds"/>
+                <h4 class="form__title">Total funding amount </h4>
+                <input type="text" placeholder="Enter the Total funding here" class="input" name="total_funding_usd"/>
+                <h4 class="form__title"> Milestones</h4>
+                <input type="text" placeholder=" Enter the Milestone here" class="input" name="milestones"/>
+                <h4 class="form__title"> Relationships</h4>
+                <input type="text" placeholder="Enter the Relationship here" class="input" name="relationships"/>
+                <!-- <h4 class="form__title"> click the button to Submit</button></h4> -->
+                <button class="btn"> Submit</button>
+                <h4 class="result" >
+                    {{prediction_text}}
+                </h4>
+            </form>
+        <!--</div>-->
+    </div>
+    <script src="../static/project.js"></script>
+</body>
+
+</html>
