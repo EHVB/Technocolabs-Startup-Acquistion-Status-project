@@ -10,7 +10,7 @@ The dataset we are working on is a combination of numerical and categorical data
 - The label of the dataset is whether the startup is `operating` , `closed` , `acquired`, or `ipo`
 
 ---
-## Preprocessing  
+## EDA and Preprocessing  
 
 ### Data cleaning  
 **1. deleting irrelevant features and duplicate values:**
@@ -58,7 +58,7 @@ encoding `status` column:
 - replace `ipo` with `4`
 
 ---  
-## EDA and Feature Engineering  
+## Feature Engineering  
 
 ### creating new feature  
 we calculated the `funding_per_round` for the startup to show the average us dollars funded per round by dividing `funding_total_usd` by `funding_rounds`
